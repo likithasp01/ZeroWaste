@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post Food - ZeroWaste</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/post.css">
+  <style>
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      border-radius: 8px;
+    }
+    .close {
+      position: absolute;
+      top: 60px;
+      right: 80px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .preview-link {
+      margin-left: 10px;
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('partials/navbar') %>
+
+  <div class="card">
+      <h1>Post Your Food</h1>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+          <input class="input" type="text" name="name" placeholder="Enter Your Name" required />
+          <input class="input" type="text" name="contact" placeholder="Phone Number" required />
+          <textarea class="input" name="description" maxlength="100" placeholder="Description" required></textarea>
+          <small style="color: rgb(44, 44, 44); margin-left: 20px;"></small>
+          <input class="input" type="text" name="address" placeholder="Address" required />
+
+          <div class="input" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+            <input type="file" id="imageInput" name="image" accept="image/*" capture="environment" required>
+            <span id="previewLink" class="preview-link">Preview</span>
+          </div>
+
+          <input class="input" id="location" type="text" name="location" placeholder="Your Location" required readonly />
+          <button type="button" class="location-btn" onclick="getLocation()">📍 Use My Location</button>
+
+          <div id="map"></div>
+
+          <div class="form-group">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">
+              I agree to the
+              <a href="/terms" target="_blank">Terms and Conditions</a>.
+            </label>
+          </div>
+
+          <button type="submit" class="post-btn">Post</button>
+      </form>
+  </div>
+
+  <div id="previewModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="previewImg">
+  </div>
+
+<script src="/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const imageInput = document.getElementById("imageInput");
+  const previewLink = document.getElementById("previewLink");
+  const modal = document.getElementById("previewModal");
+  const modalImg = document.getElementById("previewImg");
+  const closeBtn = document.querySelector(".close");
+
+  imageInput.onchange = evt => {
+    if (evt.target.files.length > 0) {
+      previewLink.style.display = "inline";
+    } else {
+      previewLink.style.display = "none";
+    }
+  };
+
+  previewLink.onclick = () => {
+    const [file] = imageInput.files;
+    if (file) {
+      modal.style.display = "block";
+      modalImg.src = URL.createObjectURL(file);
+    }
+  };
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  window.onclick = event => {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ZeroWaste Intro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    .content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      position: fixed;
+      background-image: url("/images/bg-intro.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    span{
+        font-size: 1.5rem;
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 10px #000;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+    <div class="content intro">
+        <h1>Welcome to ZeroWaste<br>
+        <span> Meal Can Make a Difference.<br> Be the Reason to Someone Smiles Today.</span></h2>
+    </div>
+
+<script>
+    setTimeout(() => {
+      window.location.href = "/home";
+    }, 5000);
+</script>
+
+</body>
+</html>
