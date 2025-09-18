@@ -100,7 +100,7 @@ Create a .env file in the root directory:
 code:
 ```
 DB_HOST=localhost
-DB_USER=root
+DB_USER=zerowaste
 DB_PASS=password
 DB_NAME=zerowasteproject
 OTP_EXP_MINUTES=10
