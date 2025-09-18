@@ -225,10 +225,10 @@ app.get("/about", (req, res) => {
 });
 
 const getUserProfile = () => ({
-  name: 'John Doe',
-  email: 'john@example.com',
+  name: 'likitha',
+  email: 'likitha@example.com',
   role: 'Frontend Developer',
-  joined: 'Jan 2023'
+  joined: 'Jan 2025'
 });
 
 app.get('/profile', (req, res) => {
