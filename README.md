@@ -143,7 +143,8 @@ node app.js
 
 ## OTP Verification
 ![WhatsApp Image 2025-09-18 at 20 37 28_8de8ff12](https://github.com/user-attachments/assets/c5cf79fe-bdff-47ec-8fa8-4e761eb5cb48)
-![WhatsApp Image 2025-09-18 at 22 49 38_9b2b02a1](https://github.com/user-attachments/assets/c7f44e30-1696-4903-87f2-7b3090473c19)
+
+![WhatsApp Image 2025-09-18 at 23 31 25_9f616be0](https://github.com/user-attachments/assets/a7da854c-0b30-4145-b3c0-17400c530d7d)
 
 
 
