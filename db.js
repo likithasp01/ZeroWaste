@@ -1,10 +1,10 @@
-const mysql = require('mysql2');
+wasteconst mysql = require('mysql2');
 
 const pool = mysql.createPool({
   host: 'localhost',
   user: 'foodapp',
-  password: 'foodpassword',
-  database: 'zerowaste'
+  password: 'pass',
+  database: 'projectname'
 });
 
 module.exports = pool.promise();
