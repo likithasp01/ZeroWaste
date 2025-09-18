@@ -35,13 +35,15 @@
       font-weight: bold;
       cursor: pointer;
     }
-    .preview-link {
-      margin-left: 10px;
-      cursor: pointer;
-      color: blue;
-      text-decoration: underline;
-      display: none;
+
+    .input{
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+        margin-top: 5px;
+        border-radius: 5px;
     }
+
   </style>
 </head>
 
@@ -57,9 +59,9 @@
           <small style="color: rgb(44, 44, 44); margin-left: 20px;"></small>
           <input class="input" type="text" name="address" placeholder="Address" required />
 
-          <div class="input" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+          <div class="input" style="color:rgb(24, 23, 23)">
             <input type="file" id="imageInput" name="image" accept="image/*" capture="environment" required>
-            <span id="previewLink" class="preview-link">Preview</span>
+            <span style="color:rgb(0, 26, 255)" id="previewLink" class="preview-link">Preview</span>
           </div>
 
           <input class="input" id="location" type="text" name="location" placeholder="Your Location" required readonly />
