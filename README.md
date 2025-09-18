@@ -91,7 +91,7 @@ ZeroWaste/
 
 npm install
 
-**Configure environment variables**
+**Configure environment variables :**
 
 
 Create a .env file in the root directory:
@@ -117,10 +117,11 @@ node app.js
 # Screenshots
 
 ## Welcome Page
-
+![WhatsApp Image 2025-07-24 at 21 09 06_ff6c763b](https://github.com/user-attachments/assets/a5352e24-b777-42a2-8fdb-b5080833adeb)
 
 ## Home Page
-![WhatsApp Image 2025-07-24 at 21 09 06_ff6c763b](https://github.com/user-attachments/assets/a5352e24-b777-42a2-8fdb-b5080833adeb)
+![WhatsApp Image 2025-09-18 at 22 13 30_b2f5ca9a](https://github.com/user-attachments/assets/b1873cbf-69e6-418e-aedf-c137dcae353b)
+
 
 ## The food i shared
 ![WhatsApp Image 2025-09-18 at 22 14 02_29cec620](https://github.com/user-attachments/assets/09889629-9c16-40cf-9942-ca2f85b61b7a)
